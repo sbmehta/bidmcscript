@@ -18,28 +18,40 @@ $.expr[":"].contains = $.expr.createPseudo(function(arg) {
     };
 });
 
-var antibiotics = ["ampicillin", "piperacillin", "azithromycin",
-                   "cefepime", "ceftaroline", "ceftazidime", "ceftriaxone",
-                   "ciprofloxacin", "levofloxacin",
-                   "meropenem",
-                   "clindamycin", "metronidazole",
-                   "aztreonam",
-                   "doxycycline", "tigecycline",
-                   "daptomycin", "linezolid", "vancomycin"];
-var antimicrobials =  ["acyclovir", "fluconazole", "micafungin", "valacyclovir"];
+var colorBACT = "pink";
+var colorFUNG = "powderblue";
+var colorVIRS = "darkseagreen";
+
+var antiBACT = ["ampicillin", "amoxicillin", "nafcillin", "penicillin", "piperacillin", 
+                "cefepime", "ceftaroline", "ceftazidime", "ceftolozane", "ceftriaxone",
+                "meropenem", "ertapenem",
+                "azithromycin", "clarithromycin", "erythromycin",
+                "ciprofloxacin", "levofloxacin",
+                "doxycycline", "tigecycline",
+                "fosfomycin", "nitrofurantoin",
+                "clindamycin", "metronidazole", "trimethoprim",
+                "aztreonam",
+                "daptomycin", "linezolid", "vancomycin"];
+var antiFUNG =  ["amphotericin", "fluconazole", "itraconazole", "micafungin", "posaconazole", "voriconazole"];
+var antiVIRS =  ["acyclovir", "ganciclovir", "valacyclovir"];
 
 
 
 $(document).ready(function()
 {
     //$("#cnont").cols = 100;
+    var a = 0;
 
-    for (var a = 0; a < antibiotics.length; a++) {
-        $("td:contains('" + antibiotics[a] + "')").css("background", "pink");
+    for (a = 0; a < antiBACT.length; a++) {
+        $("td:contains('" + antiBACT[a] + "')").css("background", colorBACT);
     }
 
-    for (a = 0; a < antimicrobials.length; a++) {
-        $("td:contains('" + antimicrobials[a] + "')").css("background", "powderblue");
+    for (a = 0; a < antiFUNG.length; a++) {
+        $("td:contains('" + antiFUNG[a] + "')").css("background", colorFUNG);
+    }
+
+    for (a = 0; a < antiVIRS.length; a++) {
+        $("td:contains('" + antiVIRS[a] + "')").css("background", colorVIRS);
     }
 
     //alert("Hello world.");
