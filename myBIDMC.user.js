@@ -3,7 +3,7 @@
 // @namespace    http://bidmc.samarmehta.com
 // @downloadURL  https://github.com/sbmehta/bidmcscript/raw/master/myBIDMC.user.js
 // @updateURL    https://github.com/sbmehta/bidmcscript/raw/master/myBIDMC.user.js
-// @version      0.1
+// @version      0.2
 // @description  cosmetic changes for BIDMC OMR/POE/Team Census
 // @author       samar mehta
 // @match        https://holmes.caregroup.org/scripts/nph-mgwcgi?MGWLPN=MYCROFT*
@@ -43,7 +43,7 @@ var antiVIRS =  ["acyclovir", "valacyclovir",
                  "foscarnet"];
 var antiPARS =  ["atovaquone",
                  "ivermectin",
-                 "chloroquine", "mefloquine", "primaquine"]
+                 "chloroquine", "mefloquine", "primaquine"];
 
 
 $(document).ready(function()
