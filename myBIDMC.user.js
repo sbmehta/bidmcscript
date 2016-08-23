@@ -65,6 +65,8 @@ $(document).ready(function()
         $("td:contains('" + antiPARS[a] + "')").css("background", colorPARS);
     }
 
+    $("textarea").resizable();
+
     //alert("Hello world.");
 });
 
