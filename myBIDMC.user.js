@@ -6,7 +6,7 @@
 // @version      0.2
 // @description  cosmetic changes for BIDMC OMR/POE/Team Census
 // @author       samar mehta
-// @match        https://holmes.caregroup.org/scripts/nph-mgwcgi?MGWLPN=MYCROFT*
+// @match        https://holmes.caregroup.org/scripts/*
 // @grant        none
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js
 // @require      https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js
