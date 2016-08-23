@@ -21,6 +21,7 @@ $.expr[":"].contains = $.expr.createPseudo(function(arg) {
 var colorBACT = "pink";
 var colorFUNG = "powderblue";
 var colorVIRS = "darkseagreen";
+var colorPARS = "plum";
 
 var antiBACT = ["ampicillin", "amoxicillin", "nafcillin", "penicillin", "piperacillin", 
                 "cefepime", "ceftaroline", "ceftazidime", "ceftolozane", "ceftriaxone",
@@ -32,9 +33,15 @@ var antiBACT = ["ampicillin", "amoxicillin", "nafcillin", "penicillin", "piperac
                 "clindamycin", "metronidazole", "trimethoprim",
                 "aztreonam",
                 "daptomycin", "linezolid", "vancomycin"];
-var antiFUNG =  ["amphotericin", "fluconazole", "itraconazole", "micafungin", "posaconazole", "voriconazole"];
-var antiVIRS =  ["acyclovir", "ganciclovir", "valacyclovir"];
-
+var antiFUNG =  ["amphotericin", 
+                 "micafungin",
+                 "fluconazole", "itraconazole", "posaconazole", "voriconazole"];
+var antiVIRS =  ["acyclovir", "valacyclovir"
+                 "ganciclovir", "valgancyclovir"
+                 "foscarnet"];
+var antiPARS =  ["atovaquone", 
+                 "ivermectin",
+                 "chloroquine", "mefloquine", "primaquine"]
 
 
 $(document).ready(function()
@@ -52,6 +59,10 @@ $(document).ready(function()
 
     for (a = 0; a < antiVIRS.length; a++) {
         $("td:contains('" + antiVIRS[a] + "')").css("background", colorVIRS);
+    }
+
+    for (a = 0; a < antiPARS.length; a++) {
+        $("td:contains('" + antiPARS[a] + "')").css("background", colorPARS);
     }
 
     //alert("Hello world.");
