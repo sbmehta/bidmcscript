@@ -71,7 +71,7 @@ $(document).ready(function()
         $("td:contains('" + antiPARS[a] + "')").css("background", colorPARS);
     }
 
-    $("textarea").css("resize", "both").resizable();
+    //$("textarea").css("resize", "both").resizable();
 
     //alert("Hello world.");
 });
