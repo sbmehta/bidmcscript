@@ -8,8 +8,12 @@
 // @author       samar mehta
 // @match        https://holmes.caregroup.org/scripts/nph-mgwcgi?MGWLPN=MYCROFT*
 // @grant        none
-// @require http://code.jquery.com/jquery-latest.js
+// @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js
+// @require      https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js
+// @resource     https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css
 // ==/UserScript==
+
+
 
 //Avoid conflicts
 //this.$ = this.jQuery = jQuery.noConflict(true);
@@ -23,7 +27,7 @@ $.expr[":"].contains = $.expr.createPseudo(function(arg) {
 var colorBACT = "pink";
 var colorFUNG = "powderblue";
 var colorVIRS = "darkseagreen";
-var colorPARS = "plum";
+var colorPARS = "thistle";
 
 var antiBACT = ["ampicillin", "amoxicillin", "nafcillin", "penicillin", "piperacillin",
                 "cefepime", "ceftaroline", "ceftazidime", "ceftolozane", "ceftriaxone",
