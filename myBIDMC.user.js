@@ -1,6 +1,8 @@
 // ==UserScript==
 // @name         myBIDMC
 // @namespace    http://bidmc.samarmehta.com
+// @downloadURL  https://github.com/sbmehta/bidmcscript/raw/master/myBIDMC.user.js
+// @updateURL    https://github.com/sbmehta/bidmcscript/raw/master/myBIDMC.user.js
 // @version      0.1
 // @description  cosmetic changes for BIDMC OMR/POE/Team Census
 // @author       samar mehta
@@ -23,7 +25,7 @@ var colorFUNG = "powderblue";
 var colorVIRS = "darkseagreen";
 var colorPARS = "plum";
 
-var antiBACT = ["ampicillin", "amoxicillin", "nafcillin", "penicillin", "piperacillin", 
+var antiBACT = ["ampicillin", "amoxicillin", "nafcillin", "penicillin", "piperacillin",
                 "cefepime", "ceftaroline", "ceftazidime", "ceftolozane", "ceftriaxone",
                 "meropenem", "ertapenem",
                 "azithromycin", "clarithromycin", "erythromycin",
@@ -33,13 +35,13 @@ var antiBACT = ["ampicillin", "amoxicillin", "nafcillin", "penicillin", "piperac
                 "clindamycin", "metronidazole", "trimethoprim",
                 "aztreonam",
                 "daptomycin", "linezolid", "vancomycin"];
-var antiFUNG =  ["amphotericin", 
+var antiFUNG =  ["amphotericin",
                  "micafungin",
                  "fluconazole", "itraconazole", "posaconazole", "voriconazole"];
-var antiVIRS =  ["acyclovir", "valacyclovir"
-                 "ganciclovir", "valgancyclovir"
+var antiVIRS =  ["acyclovir", "valacyclovir",
+                 "ganciclovir", "valgancyclovir",
                  "foscarnet"];
-var antiPARS =  ["atovaquone", 
+var antiPARS =  ["atovaquone",
                  "ivermectin",
                  "chloroquine", "mefloquine", "primaquine"]
 
