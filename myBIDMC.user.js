@@ -30,7 +30,7 @@ var colorVIRS = "darkseagreen";
 var colorPARS = "thistle";
 
 var antiBACT = ["ampicillin", "amoxicillin", "nafcillin", "penicillin", "piperacillin",
-                "cefepime", "ceftaroline", "ceftazidime", "ceftolozane", "ceftriaxone",
+                "cephalexin", "cefepime", "ceftaroline", "ceftazidime", "ceftolozane", "ceftriaxone",
                 "meropenem", "ertapenem",
                 "azithromycin", "clarithromycin", "erythromycin",
                 "ciprofloxacin", "levofloxacin",
