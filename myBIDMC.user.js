@@ -30,45 +30,57 @@ var colorVIRS = "darkseagreen";
 var colorPARS = "thistle";
 
 var antiBACT = ["ampicillin", "amoxicillin", "nafcillin", "penicillin", "piperacillin",
-                "cephalexin", "cefepime", "ceftaroline", "ceftazidime", "ceftolozane", "ceftriaxone",
-                "meropenem", "ertapenem",
+                "cephalexin", "cefazolin", "cefepime", "ceftaroline", "ceftazidime", "ceftolozane", "ceftriaxone",
+                "doripenem", "ertapenem", "imipenem", "meropenem",
                 "azithromycin", "clarithromycin", "erythromycin",
-                "ciprofloxacin", "levofloxacin",
-                "doxycycline", "tigecycline",
-                "fosfomycin", "nitrofurantoin",
+                "ciprofloxacin", "levofloxacin", "moxifloxacin", 
+                "doxycycline", "minocycline", "tetracycline", "tigecycline",
+                "fosfomycin", "nitrofurantoin", 
                 "clindamycin", "metronidazole", "trimethoprim",
+                "amikacin", "gentamicin", "tobramycin",
                 "aztreonam",
-                "daptomycin", "linezolid", "vancomycin"];
+                "fidaxomicin", "rifaximin", 
+                "rifampin", 
+                "polymixin", 
+                "daptomycin", "linezolid", "televancin", "vancomycin"]; 
 var antiFUNG =  ["amphotericin",
+                 "nystatin",
+                 "flucytosine", 
+                 "griseofulvin",
                  "micafungin",
-                 "fluconazole", "itraconazole", "posaconazole", "voriconazole"];
+                 "fluconazole", "itraconazole", "posaconazole", "voriconazole", 
+                 "clotrimazole"];
 var antiVIRS =  ["acyclovir", "valacyclovir",
                  "ganciclovir", "valgancyclovir",
-                 "foscarnet"];
+                 "foscarnet", 
+                 "entacavir", "tenofovir", "lamivudine", 
+                 "boceprevir", "lepidasvir", "sofosbuvir",
+                 "oseltamivir"];
 var antiPARS =  ["atovaquone",
-                 "ivermectin",
+                 "ivermectin", "mebendazole", "pyrantel",
+                 "praziquantel", "albendazole", 
                  "chloroquine", "mefloquine", "primaquine"];
 
 
 $(document).ready(function()
 {
-    //$("#cnont").cols = 100;
     var a = 0;
+    var leaves = $("td").not(":has(table)");
 
     for (a = 0; a < antiBACT.length; a++) {
-        $("td:contains('" + antiBACT[a] + "')").css("background", colorBACT);
+        leaves.filter(":contains(" + antiBACT[a] + ")").css("background", colorBACT);
     }
 
     for (a = 0; a < antiFUNG.length; a++) {
-        $("td:contains('" + antiFUNG[a] + "')").css("background", colorFUNG);
+        leaves.filter(":contains(" + antiFUNG[a] + ")").css("background", colorFUNG);
     }
 
     for (a = 0; a < antiVIRS.length; a++) {
-        $("td:contains('" + antiVIRS[a] + "')").css("background", colorVIRS);
+        leaves.filter(":contains(" + antiVIRS[a] + ")").css("background", colorVIRS);
     }
 
     for (a = 0; a < antiPARS.length; a++) {
-        $("td:contains('" + antiPARS[a] + "')").css("background", colorPARS);
+        leaves.filter(":contains(" + antiPAS[a] + ")").css("background", colorPARS);
     }
 
     $("textarea").css("resize", "both");
