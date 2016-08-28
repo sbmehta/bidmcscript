@@ -3,7 +3,7 @@
 // @namespace    http://bidmc.samarmehta.com
 // @downloadURL  https://github.com/sbmehta/bidmcscript/raw/master/myBIDMC.user.js
 // @updateURL    https://github.com/sbmehta/bidmcscript/raw/master/myBIDMC.user.js
-// @version      0.2
+// @version      0.3
 // @description  cosmetic changes for BIDMC OMR/POE/Team Census
 // @author       samar mehta
 // @match        https://holmes.caregroup.org/scripts/*
@@ -33,32 +33,32 @@ var antiBACT = ["ampicillin", "amoxicillin", "nafcillin", "penicillin", "piperac
                 "cephalexin", "cefazolin", "cefepime", "ceftaroline", "ceftazidime", "ceftolozane", "ceftriaxone",
                 "doripenem", "ertapenem", "imipenem", "meropenem",
                 "azithromycin", "clarithromycin", "erythromycin",
-                "ciprofloxacin", "levofloxacin", "moxifloxacin", 
+                "ciprofloxacin", "levofloxacin", "moxifloxacin",
                 "doxycycline", "minocycline", "tetracycline", "tigecycline",
-                "fosfomycin", "nitrofurantoin", 
+                "fosfomycin", "nitrofurantoin",
                 "clindamycin", "metronidazole", "trimethoprim",
                 "amikacin", "gentamicin", "tobramycin",
                 "aztreonam",
-                "fidaxomicin", "rifaximin", 
-                "rifampin", 
-                "polymixin", 
+                "fidaxomicin", "rifaximin",
+                "rifampin",
+                "polymixin",
                 "daptomycin", "linezolid", "televancin", "vancomycin"]; 
 var antiFUNG =  ["amphotericin",
                  "nystatin",
-                 "flucytosine", 
+                 "flucytosine",
                  "griseofulvin",
                  "micafungin",
-                 "fluconazole", "itraconazole", "posaconazole", "voriconazole", 
+                 "fluconazole", "itraconazole", "posaconazole", "voriconazole",
                  "clotrimazole"];
 var antiVIRS =  ["acyclovir", "valacyclovir",
                  "ganciclovir", "valgancyclovir",
-                 "foscarnet", 
-                 "entacavir", "tenofovir", "lamivudine", 
+                 "foscarnet",
+                 "entacavir", "tenofovir", "lamivudine",
                  "boceprevir", "lepidasvir", "sofosbuvir",
                  "oseltamivir"];
 var antiPARS =  ["atovaquone",
                  "ivermectin", "mebendazole", "pyrantel",
-                 "praziquantel", "albendazole", 
+                 "praziquantel", "albendazole",
                  "chloroquine", "mefloquine", "primaquine"];
 
 
