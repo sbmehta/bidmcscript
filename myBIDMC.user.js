@@ -80,7 +80,7 @@ $(document).ready(function()
     }
 
     for (a = 0; a < antiPARS.length; a++) {
-        leaves.filter(":contains(" + antiPAS[a] + ")").css("background", colorPARS);
+        leaves.filter(":contains(" + antiPARS[a] + ")").css("background", colorPARS);
     }
 
     $("textarea").css("resize", "both");
