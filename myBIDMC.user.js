@@ -49,7 +49,7 @@ var antiFUNG =  ["amphotericin",
                  "griseofulvin",
                  "micafungin",
                  "fluconazole", "itraconazole", "posaconazole", "voriconazole",
-                 "clotrimazole"];
+                 "clotrimazole", "miconazole"];
 var antiVIRS =  ["acyclovir", "valacyclovir",
                  "ganciclovir", "valgancyclovir",
                  "foscarnet",
