@@ -85,6 +85,8 @@ $(document).ready(function()
 
     $("textarea").css("resize", "both");
 
-    //alert("Hello world.");
+    $("table").keypress(function () {
+        alert("Hello world.");
+    })
 });
 
