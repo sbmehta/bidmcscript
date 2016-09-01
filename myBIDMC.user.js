@@ -7,13 +7,11 @@
 // @description  cosmetic changes for BIDMC OMR/POE/Team Census
 // @author       samar mehta
 // @match        https://holmes.caregroup.org/scripts/*
-// @grant        none
+// @grant        GM_addStyle
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js
 // @require      https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js
 // @resource     https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css
 // ==/UserScript==
-
-
 
 //Avoid conflicts
 //this.$ = this.jQuery = jQuery.noConflict(true);
@@ -24,69 +22,80 @@ $.expr[":"].contains = $.expr.createPseudo(function(arg) {
     };
 });
 
-var colorBACT = "pink";
-var colorFUNG = "powderblue";
-var colorVIRS = "darkseagreen";
-var colorPARS = "thistle";
+function classify(domain, wordlist, stylename) {
+    for (var a = 0; a < wordlist.length; a++) {
+        domain.filter(":contains(" + wordlist[a] + ")").addClass(stylename);
+    }
+}
 
-var antiBACT = ["ampicillin", "amoxicillin", "nafcillin", "penicillin", "piperacillin",
+GM_addStyle(".dispHIGHLIGHT  {background: yellow !important;}");
+GM_addStyle(".dispBACT       {background: pink;}");
+GM_addStyle(".dispFUNG       {background: powderblue;}");
+GM_addStyle(".dispVIRS       {background: darkseagreen;}");
+GM_addStyle(".dispPARS       {background: thistle;}");
+
+var antiBACT = ["cillin", "penem", "floxacin", "mycin", "cycline",   // common suffixes
                 "cephalexin", "cefazolin", "cefepime", "ceftaroline", "ceftazidime", "ceftolozane", "ceftriaxone",
-                "doripenem", "ertapenem", "imipenem", "meropenem",
-                "azithromycin", "clarithromycin", "erythromycin",
-                "ciprofloxacin", "levofloxacin", "moxifloxacin",
-                "doxycycline", "minocycline", "tetracycline", "tigecycline",
-                "fosfomycin", "nitrofurantoin",
-                "clindamycin", "metronidazole", "trimethoprim",
-                "amikacin", "gentamicin", "tobramycin",
-                "aztreonam",
+                "unasyn",
+                "nitrofurantoin", "metronidazole", "trimethoprim",
+                "amikacin", "gentamicin", "aztreonam",
                 "fidaxomicin", "rifaximin",
-                "rifampin",
-                "polymixin",
-                "daptomycin", "linezolid", "televancin", "vancomycin"]; 
-var antiFUNG =  ["amphotericin",
+                "rifampin", "linezolid", "televancin",
+                "polymyxin",
+                "bacitracin", "chlorhexidine"];
+var antiFUNG =  ["conazole",                                         // common suffixes
+                 "amphotericin",
                  "nystatin",
                  "flucytosine",
                  "griseofulvin",
                  "micafungin",
-                 "fluconazole", "itraconazole", "posaconazole", "voriconazole",
-                 "clotrimazole", "miconazole"];
-var antiVIRS =  ["acyclovir", "valacyclovir",
-                 "ganciclovir", "valgancyclovir",
+                 "clotrimazole"];
+var antiVIRS =  ["clovir",                                           // common suffixes
                  "foscarnet",
                  "entacavir", "tenofovir", "lamivudine",
                  "boceprevir", "lepidasvir", "sofosbuvir",
                  "oseltamivir"];
-var antiPARS =  ["atovaquone",
-                 "ivermectin", "mebendazole", "pyrantel",
-                 "praziquantel", "albendazole",
-                 "chloroquine", "mefloquine", "primaquine"];
+var antiPARS =  ["bendazole", "oquine",                              // common suffixes
+                 "ivermectin", "pyrantel", "praziquantel", "atovaquone",
+                 "primaquine"];
 
+var BACT = ["staph", "strep", "coccus", "clostridium", "difficile", "corynebacterium", "campylobacter",
+            "lactobacillus", "pseudomonas", "klebsiella"];
+
+var FUNG = ["candida", "albicans", "glabrata", "kruseii"];
+
+var VIRS = ["EBV", "CMV", "HSV", "VZV", "influenza"];
+
+var PARS = ["malaria", "strongyloid"];
 
 $(document).ready(function()
 {
     var a = 0;
     var leaves = $("td").not(":has(table)");
 
-    for (a = 0; a < antiBACT.length; a++) {
-        leaves.filter(":contains(" + antiBACT[a] + ")").css("background", colorBACT);
-    }
+    //alert("Doing my best here ...");
 
-    for (a = 0; a < antiFUNG.length; a++) {
-        leaves.filter(":contains(" + antiFUNG[a] + ")").css("background", colorFUNG);
-    }
-
-    for (a = 0; a < antiVIRS.length; a++) {
-        leaves.filter(":contains(" + antiVIRS[a] + ")").css("background", colorVIRS);
-    }
-
-    for (a = 0; a < antiPARS.length; a++) {
-        leaves.filter(":contains(" + antiPARS[a] + ")").css("background", colorPARS);
-    }
+    classify(leaves, BACT, "dispBACT");
+    classify(leaves, antiBACT, "dispBACT");
+    classify(leaves, VIRS, "dispVIRS");
+    classify(leaves, antiVIRS, "dispVIRS");
+    //classify(leaves, FUNG, "dispFUNG");
+    classify(leaves, antiFUNG, "dispFUNG");
+    //classify(leaves, PARS, "dispPARS");
+    classify(leaves, antiPARS, "dispPARS");
 
     $("textarea").css("resize", "both");
 
-    $("table").keypress(function () {
-        alert("Hello world.");
-    })
+    $("table").dblclick(function () {
+        var table = $(this);
+        var cells = table.find("td").not(":has(table)");
+        cells.click(function () {
+            $(this).toggleClass("dispHIGHLIGHT");
+            //$(this).attr("contenteditable", "true");
+        });
+
+    });
+
+        table.off("dblclick");
 });
 
