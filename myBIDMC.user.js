@@ -93,9 +93,8 @@ $(document).ready(function()
             $(this).toggleClass("dispHIGHLIGHT");
             //$(this).attr("contenteditable", "true");
         });
-
-    });
-
         table.off("dblclick");
+    });
+    
 });
 
