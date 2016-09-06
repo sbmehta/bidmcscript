@@ -80,9 +80,9 @@ $(document).ready(function()
     classify(leaves, antiBACT, "dispBACT");
     classify(leaves, VIRS, "dispVIRS");
     classify(leaves, antiVIRS, "dispVIRS");
-    //classify(leaves, FUNG, "dispFUNG");
+    classify(leaves, FUNG, "dispFUNG");
     classify(leaves, antiFUNG, "dispFUNG");
-    //classify(leaves, PARS, "dispPARS");
+    classify(leaves, PARS, "dispPARS");
     classify(leaves, antiPARS, "dispPARS");
 
     $("textarea").css("resize", "both");
