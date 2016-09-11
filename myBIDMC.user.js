@@ -37,7 +37,7 @@ GM_addStyle(".dispPARS       {background: thistle;}");
 
 var antiBACT = ["cillin", "penem", "floxacin", "mycin", "cycline",   // common suffixes
                 "cephalexin", "cefazolin", "cefepime", "cefpodoxime", "ceftaroline", "ceftazidime", "ceftolozane", "ceftriaxone",
-                "Unasyn", "Augmentin", "Zosyn", "Flagyl"
+                "Unasyn", "Augmentin", "Zosyn", "Flagyl", 
                 "nitrofurantoin", "metronidazole", "trimethoprim",
                 "amikacin", "gentamicin", "aztreonam",
                 "fidaxomicin", "rifaximin",
