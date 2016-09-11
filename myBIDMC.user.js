@@ -35,7 +35,7 @@ GM_addStyle(".dispVIRS       {background: darkseagreen;}");
 GM_addStyle(".dispPARS       {background: thistle;}");
 
 var antiBACT = ["cillin", "penem", "floxacin", "mycin", "cycline",   // common suffixes
-                "cephalexin", "cefazolin", "cefepime", "ceftaroline", "ceftazidime", "ceftolozane", "ceftriaxone",
+                "cephalexin", "cefazolin", "cefepime", "cefpodoxime", "ceftaroline", "ceftazidime", "ceftolozane", "ceftriaxone",
                 "Unasyn", "Augmentin", "Zosyn", "Flagyl"
                 "nitrofurantoin", "metronidazole", "trimethoprim",
                 "amikacin", "gentamicin", "aztreonam",
@@ -61,7 +61,7 @@ var antiPARS =  ["bendazole", "oquine",                              // common s
 
 var BACT = ["bacteri", "staph", "strep", "coccus", "clostridium", "difficile", 
             "bacterium", "bacter", "bacillus", "omonas",
-            "klebsiella", "legionella", "brucella", "bartonella",
+            "klebsiella", "escheri", "legionella", "brucella", "bartonella",
             "anaplasm", "ehrlichi", "rickettsia", "borrelia", "lyme"];
 
 var FUNG = ["fungus", "fungal", "yeast", "candida", "albicans", "glabrata", "kruseii", "aspergillus"];
