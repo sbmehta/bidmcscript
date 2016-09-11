@@ -11,13 +11,15 @@
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js
 // @require      https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.1.1/jquery.mark.min.js
-// @require      https://cdnjs.cloudflare.com/ajax/libs/Dynatable/0.3.1/jquery.dynatable.min.js
 // @resource     https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css
-// @resource     https://cdnjs.cloudflare.com/ajax/libs/Dynatable/0.3.1/jquery.dynatable.min.css
 // ==/UserScript==
+
+// @require      https://cdnjs.cloudflare.com/ajax/libs/Dynatable/0.3.1/jquery.dynatable.min.js
+// @resource     https://cdnjs.cloudflare.com/ajax/libs/Dynatable/0.3.1/jquery.dynatable.min.css
 
 //Avoid conflicts
 //this.$ = this.jQuery = jQuery.noConflict(true);
+
 
 $.expr[":"].contains = $.expr.createPseudo(function(arg) {
     return function( elem ) {
