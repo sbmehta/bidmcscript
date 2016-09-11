@@ -10,7 +10,10 @@
 // @grant        GM_addStyle
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js
 // @require      https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js
+// @require      https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.1.1/jquery.mark.min.js
 // @resource     https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css
+// @require      https://cdnjs.cloudflare.com/ajax/libs/Dynatable/0.3.1/jquery.dynatable.min.js
+// @resource     https://cdnjs.cloudflare.com/ajax/libs/Dynatable/0.3.1/jquery.dynatable.min.css
 // ==/UserScript==
 
 //Avoid conflicts
@@ -27,6 +30,8 @@ function classify(domain, wordlist, stylename) {
     for (var a = 0; a < wordlist.length; a++) {
         domain.filter(":contains(" + wordlist[a] + ")").addClass(stylename);
     }
+
+//    domain.mark(wordlist, {"className": stylename, "accuracy": "complementary", "exclude":["textarea"]});
 }
 
 GM_addStyle(".dispHIGHLIGHT  {background: yellow !important;}");
@@ -37,12 +42,12 @@ GM_addStyle(".dispPARS       {background: thistle;}");
 
 var antiBACT = ["cillin", "penem", "floxacin", "mycin", "cycline",   // common suffixes
                 "cephalexin", "cefazolin", "cefepime", "cefpodoxime", "ceftaroline", "ceftazidime", "ceftolozane", "ceftriaxone",
-                "Unasyn", "Augmentin", "Zosyn", "Flagyl", 
+                "Unasyn", "Augmentin", "Zosyn", "Flagyl",
                 "nitrofurantoin", "metronidazole", "trimethoprim",
                 "amikacin", "gentamicin", "aztreonam",
                 "fidaxomicin", "rifaximin",
                 "rifampin", "linezolid", "televancin",
-                "polymyxin", "colistin", 
+                "polymyxin", "colistin",
                 "bacitracin", "chlorhexidine"];
 var antiFUNG =  ["conazole",                                         // common suffixes
                  "amphotericin",
@@ -60,7 +65,7 @@ var antiPARS =  ["bendazole", "oquine",                              // common s
                  "ivermectin", "pyrantel", "praziquantel", "atovaquone",
                  "primaquine"];
 
-var BACT = ["bacteri", "staph", "strep", "coccus", "clostridium", "difficile", 
+var BACT = ["bacteri", "staph", "strep", "coccus", "clostridium", "difficile",
             "bacterium", "bacter", "bacillus", "omonas",
             "klebsiella", "escheri", "legionella", "brucella", "bartonella",
             "anaplasm", "ehrlichi", "rickettsia", "borrelia", "lyme"];
@@ -74,18 +79,12 @@ var PARS = ["parasite", "malaria", "strongyloid"];
 $(document).ready(function()
 {
     var a = 0;
-    var leaves = $("td").not(":has(table)");
+    var leaves = $("td").not(":has(table)").not("textarea");
 
-    //alert("Doing my best here ...");
-
-    classify(leaves, BACT, "dispBACT");
-    classify(leaves, antiBACT, "dispBACT");
-    classify(leaves, VIRS, "dispVIRS");
-    classify(leaves, antiVIRS, "dispVIRS");
-    classify(leaves, FUNG, "dispFUNG");
-    classify(leaves, antiFUNG, "dispFUNG");
-    classify(leaves, PARS, "dispPARS");
-    classify(leaves, antiPARS, "dispPARS");
+    classify(leaves, BACT.concat(antiBACT), "dispBACT");
+    classify(leaves, VIRS.concat(antiVIRS), "dispVIRS");
+    classify(leaves, FUNG.concat(antiFUNG), "dispFUNG");
+    classify(leaves, PARS.concat(antiPARS), "dispPARS");
 
     $("textarea").css("resize", "both");
 
@@ -98,6 +97,6 @@ $(document).ready(function()
         });
         table.off("dblclick");
     });
-    
+
 });
 
