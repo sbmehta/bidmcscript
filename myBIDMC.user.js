@@ -3,22 +3,24 @@
 // @namespace    http://bidmc.samarmehta.com
 // @downloadURL  https://github.com/sbmehta/bidmcscript/raw/master/myBIDMC.user.js
 // @updateURL    https://github.com/sbmehta/bidmcscript/raw/master/myBIDMC.user.js
-// @version      0.3
+// @version      0.4
 // @description  cosmetic changes for BIDMC OMR/POE/Team Census
 // @author       samar mehta
 // @match        https://holmes.caregroup.org/scripts/*
 // @grant        GM_addStyle
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js
 // @require      https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js
-// @require      https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.1.1/jquery.mark.min.js
 // @resource     https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css
+// ==/UserScript==
+
+// @require      https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.1.1/jquery.mark.min.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/Dynatable/0.3.1/jquery.dynatable.min.js
 // @resource     https://cdnjs.cloudflare.com/ajax/libs/Dynatable/0.3.1/jquery.dynatable.min.css
-// ==/UserScript==
 
 //Avoid conflicts
 //this.$ = this.jQuery = jQuery.noConflict(true);
 
+// ================================= HELPER FUNCTIONS ======================================
 
 $.expr[":"].contains = $.expr.createPseudo(function(arg) {
     return function( elem ) {
@@ -34,11 +36,15 @@ function classify(domain, wordlist, stylename) {
 //    domain.mark(wordlist, {"className": stylename, "accuracy": "complementary", "exclude":["textarea"]});
 }
 
+// ================================ STYLE DEFINITIONS ===================================
+
 GM_addStyle(".dispHIGHLIGHT  {background: yellow !important;}");
 GM_addStyle(".dispBACT       {background: pink;}");
 GM_addStyle(".dispFUNG       {background: powderblue;}");
 GM_addStyle(".dispVIRS       {background: darkseagreen;}");
 GM_addStyle(".dispPARS       {background: thistle;}");
+
+// ================================== SEARCH TERMS  =====================================
 
 var antiBACT = ["cillin", "penem", "floxacin", "mycin", "cycline",   // common suffixes
                 "cephalexin", "cefazolin", "cefepime", "cefpodoxime", "ceftaroline", "ceftazidime", "ceftolozane", "ceftriaxone",
@@ -76,25 +82,25 @@ var VIRS = ["virus", "viral", "EBV", "CMV", "HSV", "VZV", "influenza", "herpes",
 
 var PARS = ["parasite", "malaria", "strongyloid"];
 
+// ===================================== MAIN ========================================
+
 $(document).ready(function()
 {
-    var a = 0;
-    var leaves = $("td").not(":has(table)").not("textarea");
-
-    classify(leaves, BACT.concat(antiBACT), "dispBACT");
-    classify(leaves, VIRS.concat(antiVIRS), "dispVIRS");
-    classify(leaves, FUNG.concat(antiFUNG), "dispFUNG");
-    classify(leaves, PARS.concat(antiPARS), "dispPARS");
-
     $("textarea").css("resize", "both");
 
     $("table").dblclick(function () {
         var table = $(this);
-        var cells = table.find("td").not(":has(table)");
-        cells.click(function () {
+        var leaves = table.find("td").not(":has(table)").not("textarea");
+        leaves.click(function () {
             $(this).toggleClass("dispHIGHLIGHT");
             //$(this).attr("contenteditable", "true");
         });
+        
+        classify(leaves, BACT.concat(antiBACT), "dispBACT");
+        classify(leaves, VIRS.concat(antiVIRS), "dispVIRS");
+        classify(leaves, FUNG.concat(antiFUNG), "dispFUNG");
+        classify(leaves, PARS.concat(antiPARS), "dispPARS");
+        
         table.off("dblclick");
     });
 
