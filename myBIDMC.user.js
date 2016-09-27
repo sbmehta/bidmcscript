@@ -49,24 +49,16 @@ GM_addStyle(".dispPARS       {background: thistle;}");
 var antiBACT = ["cillin", "penem", "floxacin", "mycin", "cycline",   // common suffixes
                 "cephalexin", "cefazolin", "cefepime", "cefpodoxime", "ceftaroline", "ceftazidime", "ceftolozane", "ceftriaxone",
                 "Unasyn", "Augmentin", "Zosyn", "Flagyl",
-                "nitrofurantoin", "metronidazole", "trimethoprim",
-                "amikacin", "gentamicin", "aztreonam",
-                "fidaxomicin", "rifaximin",
-                "rifampin", "linezolid", "televancin",
-                "polymyxin", "colistin",
-                "bacitracin", "chlorhexidine"];
-var antiFUNG =  ["conazole",                                         // common suffixes
-                 "amphotericin",
-                 "nystatin",
-                 "flucytosine",
-                 "griseofulvin",
-                 "micafungin",
-                 "clotrimazole"];
+                "nitrofurantoin", "metronidazole", "trimethoprim", "amikacin", "gentamicin", "aztreonam",
+                "fidaxomicin", "rifaximin", "rifampin", "linezolid", "tedizolid", "televancin",
+                "polymyxin", "colistin", "bacitracin", "chlorhexidine"];
+var antiFUNG =  ["conazole",  "fungin"                                // common suffixes
+                 "amphotericin", "flucytosine", "griseofulvin",
+                 "nystatin", "clotrimazole"];
 var antiVIRS =  ["clovir",                                           // common suffixes
-                 "foscarnet",
+                 "foscarnet", "oseltamivir",
                  "entacavir", "tenofovir", "lamivudine",
-                 "boceprevir", "lepidasvir", "sofosbuvir",
-                 "oseltamivir"];
+                 "boceprevir", "lepidasvir", "sofosbuvir"];
 var antiPARS =  ["bendazole", "oquine",                              // common suffixes
                  "ivermectin", "pyrantel", "praziquantel", "atovaquone",
                  "primaquine"];
@@ -75,11 +67,8 @@ var BACT = ["bacteri", "staph", "strep", "coccus", "clostridium", "difficile",
             "bacterium", "bacter", "bacillus", "omonas",
             "klebsiella", "escheri", "legionella", "brucella", "bartonella",
             "anaplasm", "ehrlichi", "rickettsia", "borrelia", "lyme"];
-
 var FUNG = ["fungus", "fungal", "yeast", "candida", "albicans", "glabrata", "kruseii", "aspergillus"];
-
 var VIRS = ["virus", "viral", "EBV", "CMV", "HSV", "VZV", "influenza", "herpes", "adenovirus"];
-
 var PARS = ["parasite", "malaria", "strongyloid"];
 
 // ===================================== MAIN ========================================
@@ -91,6 +80,9 @@ $(document).ready(function()
     $("table").dblclick(function () {
         var table = $(this);
         var leaves = table.find("td").not(":has(table)").not("textarea");
+        
+        this.css("border", "3px solid blue");
+        
         leaves.click(function () {
             $(this).toggleClass("dispHIGHLIGHT");
             //$(this).attr("contenteditable", "true");
