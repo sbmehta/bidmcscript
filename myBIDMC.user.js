@@ -81,7 +81,7 @@ $(document).ready(function()
         var table = $(this);
         var leaves = table.find("td").not(":has(table)").not("textarea");
 
-        this.css("border", "3px solid blue");
+        $(this).css("border", "3px solid midnightblue");
 
         leaves.click(function () {
             $(this).toggleClass("dispHIGHLIGHT");
