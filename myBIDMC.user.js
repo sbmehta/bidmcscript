@@ -43,7 +43,7 @@ GM_addStyle(".dispBACT       {background: pink;}");
 GM_addStyle(".dispFUNG       {background: powderblue;}");
 GM_addStyle(".dispVIRS       {background: darkseagreen;}");
 GM_addStyle(".dispPARS       {background: thistle;}");
-
+  
 // ================================== SEARCH TERMS  =====================================
 
 var antiBACT = ["cillin", "penem", "floxacin", "mycin", "cycline",   // common suffixes
