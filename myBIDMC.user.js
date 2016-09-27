@@ -52,7 +52,7 @@ var antiBACT = ["cillin", "penem", "floxacin", "mycin", "cycline",   // common s
                 "nitrofurantoin", "metronidazole", "trimethoprim", "amikacin", "gentamicin", "aztreonam",
                 "fidaxomicin", "rifaximin", "rifampin", "linezolid", "tedizolid", "televancin",
                 "polymyxin", "colistin", "bacitracin", "chlorhexidine"];
-var antiFUNG =  ["conazole",  "fungin"                                // common suffixes
+var antiFUNG =  ["conazole",  "fungin",                              // common suffixes
                  "amphotericin", "flucytosine", "griseofulvin",
                  "nystatin", "clotrimazole"];
 var antiVIRS =  ["clovir",                                           // common suffixes
@@ -80,19 +80,19 @@ $(document).ready(function()
     $("table").dblclick(function () {
         var table = $(this);
         var leaves = table.find("td").not(":has(table)").not("textarea");
-        
+
         this.css("border", "3px solid blue");
-        
+
         leaves.click(function () {
             $(this).toggleClass("dispHIGHLIGHT");
             //$(this).attr("contenteditable", "true");
         });
-        
+
         classify(leaves, BACT.concat(antiBACT), "dispBACT");
         classify(leaves, VIRS.concat(antiVIRS), "dispVIRS");
         classify(leaves, FUNG.concat(antiFUNG), "dispFUNG");
         classify(leaves, PARS.concat(antiPARS), "dispPARS");
-        
+
         table.off("dblclick");
     });
 
