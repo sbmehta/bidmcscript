@@ -3,7 +3,7 @@
 // @namespace    http://bidmc.samarmehta.com
 // @downloadURL  https://github.com/sbmehta/bidmcscript/raw/master/myBIDMC.user.js
 // @updateURL    https://github.com/sbmehta/bidmcscript/raw/master/myBIDMC.user.js
-// @version      0.4
+// @version      0.5
 // @description  cosmetic changes for BIDMC OMR/POE/Team Census
 // @author       samar mehta
 // @match        https://holmes.caregroup.org/scripts/*
