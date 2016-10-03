@@ -96,5 +96,19 @@ $(document).ready(function()
         table.off("dblclick");
     });
 
+    $("table").dblclick(function() {
+        /*$("img, td:contains('Review')").remove();
+        $("font").unwrap("nobr");
+        $("sub").parent().remove();
+        $("a, font").replaceWith(function() {
+           return this.childNodes;
+       });
+        $("td[colspan]").closest("tr").remove();
+        $("td").removeAttr("align valign nowrap");*/
+        $(this).html(function(i,h){
+            return h.replace(/&nbsp;/g,'').replace(/\*/g,'');
+        });/*
+    });
+    
 });
 
