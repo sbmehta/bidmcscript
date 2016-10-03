@@ -93,10 +93,8 @@ $(document).ready(function()
         classify(leaves, FUNG.concat(antiFUNG), "dispFUNG");
         classify(leaves, PARS.concat(antiPARS), "dispPARS");
 
-        table.off("dblclick");
-    });
-
-    $("table").dblclick(function() {
+        //table.off("dblclick");
+        
         /*$("img, td:contains('Review')").remove();
         $("font").unwrap("nobr");
         $("sub").parent().remove();
@@ -107,8 +105,7 @@ $(document).ready(function()
         $("td").removeAttr("align valign nowrap");*/
         $(this).html(function(i,h){
             return h.replace(/&nbsp;/g,'').replace(/\*/g,'');
-        });/*
+        });
     });
-    
 });
 
