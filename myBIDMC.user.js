@@ -83,7 +83,7 @@ $(document).ready(function()
 
         $(this).css("border", "3px solid midnightblue");
 
-        leaves.click(function () {
+        leaves.dblclick(function () {
             $(this).toggleClass("dispHIGHLIGHT");
             //$(this).attr("contenteditable", "true");
         });
