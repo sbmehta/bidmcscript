@@ -104,7 +104,7 @@ $(document).ready(function()
         $("td[colspan]").closest("tr").remove();
         $("td").removeAttr("align valign nowrap");*/
         $(this).html(function(i,h){
-            return h.replace(/&nbsp;/g,'').replace(/\*/g,'');
+            //return h.replace(/&nbsp;/g,'').replace(/\*/g,'');
         });
     });
 });
