@@ -52,7 +52,7 @@ var antiBACT = ["cillin", "penem", "floxacin", "mycin", "cycline",   // common s
                 "nitrofurantoin", "metronidazole", "trimethoprim", "amikacin", "gentamicin", "aztreonam",
                 "fidaxomicin", "rifaximin", "rifampin", "linezolid", "tedizolid", "televancin",
                 "polymyxin", "colistin", "bacitracin", "chlorhexidine"];
-var antiFUNG =  ["conazole",  "fungin",                              // common suffixes
+var antiFUNG =  ["conazole",  "isavucona", "fungin",                              // common suffixes
                  "amphotericin", "flucytosine", "griseofulvin",
                  "nystatin", "clotrimazole"];
 var antiVIRS =  ["clovir",                                           // common suffixes
