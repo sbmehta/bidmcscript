@@ -49,8 +49,9 @@ GM_addStyle(".dispPARS       {background: thistle;}");
 var antiBACT = ["cillin", "penem", "floxacin", "mycin", "cycline",   // common suffixes
                 "cephalexin", "cefazolin", "cefepime", "cefpodoxime", "ceftaroline", "ceftazidime", "ceftolozane", "ceftriaxone",
                 "Unasyn", "Augmentin", "Zosyn", "Flagyl",
+                "ethambutol", "pyrazinamide", "rifampin", "isoniazid",
                 "nitrofurantoin", "metronidazole", "trimethoprim", "amikacin", "gentamicin", "aztreonam",
-                "fidaxomicin", "rifaximin", "rifampin", "linezolid", "tedizolid", "televancin",
+                "fidaxomicin", "rifaximin", "linezolid", "tedizolid", "televancin",
                 "polymyxin", "colistin", "bacitracin", "chlorhexidine"];
 var antiFUNG =  ["conazole",  "isavucona", "fungin",                              // common suffixes
                  "amphotericin", "flucytosine", "griseofulvin",
@@ -66,7 +67,8 @@ var antiPARS =  ["bendazole", "oquine",                              // common s
 var BACT = ["bacteri", "staph", "strep", "coccus", "clostridium", "difficile",
             "bacterium", "bacter", "bacillus", "omonas",
             "klebsiella", "escheri", "legionella", "brucella", "bartonella",
-            "anaplasm", "ehrlichi", "rickettsia", "borrelia", "lyme"];
+            "anaplasm", "ehrlichi", "rickettsia", "borrelia", "lyme",
+            "mycoba", "tubercul", "kansasii"];
 var FUNG = ["fungus", "fungal", "yeast", "candida", "albicans", "glabrata", "kruseii", "aspergillus"];
 var VIRS = ["virus", "viral", "EBV", "CMV", "HSV", "VZV", "influenza", "herpes", "adenovirus"];
 var PARS = ["parasite", "malaria", "strongyloid"];
