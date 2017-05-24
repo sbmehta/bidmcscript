@@ -95,6 +95,8 @@ $(document).ready(function()
         classify(leaves, FUNG.concat(antiFUNG), "dispFUNG");
         classify(leaves, PARS.concat(antiPARS), "dispPARS");
 
+        debugger ;
+        
         //table.off("dblclick");
         
         /*$("img, td:contains('Review')").remove();
