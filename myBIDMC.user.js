@@ -47,7 +47,7 @@ GM_addStyle(".dispPARS       {background: thistle;}");
 // ================================== SEARCH TERMS  =====================================
 
 var antiBACT = ["cillin", "penem", "floxacin", "mycin", "cycline",   // common suffixes
-                "cephalexin", "cefazolin", "cefepime", "cefpodoxime", "ceftaroline", "ceftazidime", "ceftolozane", "ceftriaxone",
+                "cephalexin", "cefazolin", "cefepime", "cefpodoxime", "ceftaroline", "ceftazidime", "ceftolozane", "ceftriaxone", "ceclor",
                 "Unasyn", "Augmentin", "Zosyn", "Flagyl",
                 "ethambutol", "pyrazinamide", "rifampin", "isoniazid",
                 "nitrofurantoin", "metronidazole", "trimethoprim", "amikacin", "gentamicin", "aztreonam",
