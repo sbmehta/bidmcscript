@@ -97,7 +97,7 @@ $(document).ready(function()
         classify(leaves, FUNG.concat(antiFUNG), "dispFUNG");
         classify(leaves, PARS.concat(antiPARS), "dispPARS");
 
-        debugger ;
+        //debugger ;
         
         //table.off("dblclick");
 
