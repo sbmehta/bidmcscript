@@ -43,7 +43,7 @@ GM_addStyle(".dispBACT       {background: pink;}");
 GM_addStyle(".dispFUNG       {background: powderblue;}");
 GM_addStyle(".dispVIRS       {background: darkseagreen;}");
 GM_addStyle(".dispPARS       {background: thistle;}");
-  
+
 // ================================== SEARCH TERMS  =====================================
 
 var antiBACT = ["cillin", "penem", "floxacin", "mycin", "cycline",   // common suffixes
@@ -58,9 +58,10 @@ var antiFUNG =  ["conazole",  "isavucona", "fungin",                 // common s
                  "nystatin", "clotrimazole"];
 var antiVIRS =  ["clovir",                                           // common suffixes
                  "foscarnet", "oseltamivir",
-                 "entacavir", "tenofovir", "lamivudine",
-                 "dolutegravir", 
-                 "boceprevir", "lepidasvir", "sofosbuvir"];
+                 "navir", "tegravir", "cobicistat", "maraviroc", "enfuviritide",
+                 "rilpivirine", "nevirapine", "etravirine", "efavirenz", "delaviridine", 
+                 "tenofovir", "abacavir", "lamivudine", "emtricitabine", "zidovudine", 
+                 "boceprevir", "lepidasvir", "sofosbuvir", "entacavir"];
 var antiPARS =  ["bendazole", "oquine",                              // common suffixes
                  "ivermectin", "pyrantel", "praziquantel", "atovaquone",
                  "primaquine"];
@@ -99,7 +100,7 @@ $(document).ready(function()
         debugger ;
         
         //table.off("dblclick");
-        
+
         /*$("img, td:contains('Review')").remove();
         $("font").unwrap("nobr");
         $("sub").parent().remove();
