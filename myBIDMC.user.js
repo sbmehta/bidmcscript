@@ -71,7 +71,7 @@ var BACT = ["bacteri", "staph", "strep", "coccus", "clostridium", "difficile",
             "klebsiella", "escheri", "legionella", "brucella", "bartonella",
             "anaplasm", "ehrlichi", "rickettsia", "borrelia", "lyme",
             "mycoba", "tubercul", "kansasii"];
-var FUNG = ["fungus", "fungal", "yeast","mold","candida", "albicans", "glabrata", "kruseii", "aspergillus", "mucor", "scedosp", "cryptococ"];
+var FUNG = ["fungus", "fungal", "yeast", "mold", "candida", "albicans", "glabrata", "kruseii", "aspergillus", "mucor", "scedosp", "cryptococ"];
 var VIRS = ["virus", "viral", "EBV", "CMV", "HSV", "VZV", "influenza", "herpes", "adenovirus"];
 var PARS = ["parasite", "malaria", "strongyloid", "babesi", "cryptospor"];
 
