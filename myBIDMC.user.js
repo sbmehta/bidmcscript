@@ -54,7 +54,7 @@ var antiBACT = ["cillin", "penem", "floxacin", "mycin", "cycline",   // common s
                 "fidaxomicin", "rifaximin", "linezolid", "tedizolid", "televancin",
                 "polymyxin", "colistin", "bacitracin", "chlorhexidine"];
 var antiFUNG =  ["conazole",  "isavucona", "fungin",                 // common suffixes
-                 "amphotericin", "Ambisome", "flucytosine", "griseofulvin",
+                 "amphotericin", "ambisome", "flucytosine", "griseofulvin",
                  "nystatin", "clotrimazole"];
 var antiVIRS =  ["clovir",                                           // common suffixes
                  "foscarnet", "oseltamivir",
@@ -64,7 +64,7 @@ var antiVIRS =  ["clovir",                                           // common s
                  "boceprevir", "lepidasvir", "sofosbuvir", "entacavir"];
 var antiPARS =  ["bendazole", "oquine",                              // common suffixes
                  "ivermectin", "pyrantel", "praziquantel", "atovaquone",
-                 "primaquine"];
+                 "primaquine", "pyrimeth"];
 
 var BACT = ["bacteri", "staph", "strep", "coccus", "clostridium", "difficile",
             "bacterium", "bacter", "bacillus", "omonas",
