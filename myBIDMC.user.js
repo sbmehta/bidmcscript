@@ -39,10 +39,10 @@ function classify(domain, wordlist, stylename) {
 // ================================ STYLE DEFINITIONS ===================================
 
 GM_addStyle(".dispHIGHLIGHT  {background: yellow !important;}");
-GM_addStyle(".dispBACT       {background: pink;}");
-GM_addStyle(".dispFUNG       {background: powderblue;}");
-GM_addStyle(".dispVIRS       {background: darkseagreen;}");
-GM_addStyle(".dispPARS       {background: thistle;}");
+GM_addStyle(".dispBACT       {background: pink;}");               // #FFC0CB
+GM_addStyle(".dispFUNG       {background: powderblue;}");         // #B0E0E6
+GM_addStyle(".dispVIRS       {background: darkseagreen;}");       // #8FBC8F
+GM_addStyle(".dispPARS       {background: thistle;}");            // #D8BFD8
 
 // ================================== SEARCH TERMS  =====================================
 
