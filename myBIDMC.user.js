@@ -66,14 +66,14 @@ var antiPARS =  ["bendazole", "oquine",                              // common s
                  "ivermectin", "pyrantel", "praziquantel", "atovaquone",
                  "primaquine", "pyrimeth", "nifurtimox", "nitazoxanide"];
 
-var BACT = ["bacteri", "staph", "strep", "coccus", "clostridium", "difficile",
+var BACT = ["staph", "strep", "coccus", "clostridium", "difficile",    // "bacteri"
             "bacterium", "bacter", "bacillus", "omonas",
             "klebsiella", "escheri", "legionella", "brucella", "bartonella",
             "anaplasm", "ehrlichi", "rickettsia", "borrelia", "lyme",
             "mycoba", "tubercul", "kansasii"];
-var FUNG = ["fungus", "fungal", "yeast", "mold", "candida", "albicans", "glabrata", "kruseii", "aspergillus", "mucor", "scedosp", "cryptococ"];
-var VIRS = ["virus", "viral", "EBV", "CMV", "HSV", "VZV", "influenza", "herpes", "adenovirus"];
-var PARS = ["parasite", "malaria", "strongyloid", "babesi", "cryptospor"];
+var FUNG = ["yeast", "mold", "candida", "albicans", "glabrata", "kruseii", "aspergillus", "mucor", "scedosp", "cryptococ"]; // "fungus", "fungal"
+var VIRS = ["EBV", "CMV", "HSV", "VZV", "influenza", "herpes", "adenovirus"]; // "virus", "viral"
+var PARS = ["malaria", "strongyloid", "babesi", "cryptospor"]; // "parasite"
 
 // ===================================== MAIN ========================================
 
