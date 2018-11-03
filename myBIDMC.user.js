@@ -64,7 +64,7 @@ var antiPARS =  ["bendazole", "oquine",                              // common s
 
 var BACT = ["staph", "strep", "coccus", "clostridium", "difficile",    // "bacteri"
             "bacterium", "bacter", "bacillus", "omonas",
-            "klebsiella", "escheri", "legionella", "brucella", "bartonella",
+            "klebsiella", "escheri", "legionella", "brucella", "bartonella", "serratia",
             "anaplasm", "ehrlichi", "rickettsia", "borrelia", "lyme",
             "mycoba", "tubercul", "kansasii"];
 var FUNG = ["yeast", "mold", "candida", "albicans", "glabrata", "kruseii", "aspergillus", "mucor", "scedosp", "cryptococ"]; // "fungus", "fungal"
