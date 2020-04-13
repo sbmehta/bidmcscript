@@ -57,7 +57,7 @@ var antiVIRS =  ["clovir",                                           // common s
                  "navir", "tegravir", "cobicistat", "maraviroc", "enfuviritide",
                  "rilpivirine", "nevirapine", "etravirine", "efavirenz", "delaviridine", 
                  "tenofovir", "abacavir", "lamivudine", "emtricitabine", "zidovudine", 
-                 "boceprevir", "lepidasvir", "sofosbuvir", "entacavir"];
+                 "boceprevir", "lepidasvir", "sofosbuvir", "entacavir", "remdesivir"];
 var antiPARS =  ["bendazole", "oquine",                              // common suffixes
                  "ivermectin", "pyrantel", "praziquantel", "atovaquone",
                  "primaquine", "pyrimeth", "nifurtimox", "nitazoxanide"];
@@ -68,7 +68,7 @@ var BACT = ["staph", "strep", "coccus", "clostridium", "difficile",    // "bacte
             "anaplasm", "ehrlichi", "rickettsia", "borrelia", "lyme",
             "mycoba", "tubercul", "kansasii"];
 var FUNG = ["yeast", "mold", "candida", "albicans", "glabrata", "kruseii", "aspergillus", "mucor", "scedosp", "cryptococ"]; // "fungus", "fungal"
-var VIRS = ["EBV", "CMV", "HSV", "VZV", "influenza", "herpes", "adenovirus"]; // "virus", "viral"
+var VIRS = ["EBV", "CMV", "HSV", "VZV", "influenza", "herpes", "adenovirus", "coronavirus"]; // "virus", "viral"
 var PARS = ["malaria", "strongyloid", "babesi", "cryptospor"]; // "parasite"
 
 // ===================================== MAIN ========================================
